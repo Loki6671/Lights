@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooms</title>
+</head>
+<body>
+<p>You are inside the room</p>
+<label>Name room's:</label>
+<p th:text="${room.getName}">Value</p>
+<label>Light:</label>
+<p th:text="${room.isLight()}">Value</p>
+<!--<form th:method="PATCH" th:action="@{/rooms/{id}(id=${room.getId()})}" th:object="${room}">-->
+
+<!--    <action type="text" th:field="*{light}" value="On"/>-->
+<!--    <br/>-->
+<!--    <input type="submit" value="Switch on!"/>-->
+<!--</form>-->
+<!--!&#45;&#45;<form th:method="PATCH" th:action="@{/rooms/{id}(id=${room.getId()})}" th:object="${room}">&ndash;&gt;-->
+
+<!--    &lt;!&ndash;    <input type="text" th:field="*{light}" value="Off"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <br/>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <input type="submit" value="Switch!"/>&ndash;&gt;<-->
+<!--</form>-->
+<a th:href="@{/rooms/{id}/edit(id=${room.getId()})}">Edit</a>
+<a href="/rooms">Back</a>
+</body>
+</html>
